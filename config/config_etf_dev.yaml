@@ -1,0 +1,22 @@
+ETF_CONFIG:
+  ETF_HTML_CONFIG:
+    0:
+      NAME: 'Overall Composition'
+      KEY_HTML: 'Fl(start)'
+      VALUE_HTML: 'Fl(end)'
+      START_POINT: 0
+    1:
+      NAME: 'Sector'
+      KEY_HTML: 'Mend(5px) Whs(nw)'
+      VALUE_HTML: 'W(20%) D(b) Fl(start) Ta(e)'
+      START_POINT: 1
+    2:
+      NAME: 'Equity Holdings'
+      KEY_HTML: 'Mend(5px) Whs(nw)'
+      VALUE_HTML: 'Fl(end)'
+      START_POINT: 0
+    3:
+      NAME: 'Bond Ratings'
+      KEY_HTML: 'Mend(5px) Whs(nw)'
+      VALUE_HTML: 'Fl(end)'
+      START_POINT: 1

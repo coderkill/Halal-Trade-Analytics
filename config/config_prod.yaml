@@ -1,0 +1,30 @@
+DATABASE_CONFIG:
+  DB_CONFIG:
+    host: localhost
+    port: 5432
+    username: postgres
+    password: postgres
+    db_name: equity_global
+
+LOGGING_CONFIG:
+  LOGGING:
+    version: 1
+    disable_existing_loggers: False
+    formatters:
+      standard:
+        format: "[%(asctime)s] [%(levelname)s] [%(name)s] [%(filename)s] [%(funcName)s():%(lineno)s] [PID:%(process)d TID:%(thread)d] - %(message)s"
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: standard
+        stream: ext://sys.stdout
+      info_file_handler:
+        class: logging.handlers.RotatingFileHandler
+        formatter: standard
+        filename: "yahoo_finance_data.log"
+        maxBytes: 104857600 # 10MB
+        backupCount: 200
+        encoding: utf8
+    root:
+      level: INFO
+      handlers: [ console, info_file_handler ]
